@@ -3,125 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HTML Template">
-    <meta name="keywords" content="HTML, template, web development">
-    <meta name="author" content="Your Name">
-    <title>HTML Template</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <title>Email Template</title>
     <style>
-        * {
+        /* Email-safe CSS - only basic properties that work in most email clients */
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
         
         .container {
             max-width: 650px;
             margin: 0 auto;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        main {
-            background-color: transparent;
-            padding: 0;
-            border-radius: 0;
-            box-shadow: none;
-            margin-bottom: 0;
-            flex: 1;
-        }
-        
-        section {
-            margin-bottom: 2rem;
+            background-color: #ffffff;
         }
         
         .top-section {
-            background: white;
-            padding: 16px 16px 16px 16px;
-            border-radius: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
+            background-color: #ffffff;
             border-top: 4px solid #1b0757;
+            padding: 16px;
             position: relative;
         }
         
         .top-section::after {
             content: '';
             position: absolute;
-            top: -4px;
+            top: 0;
             right: 16px;
             width: 24.01px;
             height: 44.11px;
-            background: #1b0757;
+            background-color: #1b0757;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
         }
         
         .section-header {
-            font-family: 'Open Sans', sans-serif;
+            color: #1b0757;
+            font-family: Arial, sans-serif;
             font-weight: 600;
-            font-style: normal;
             font-size: 20px;
             line-height: 24px;
-            color: #1b0757;
             margin: 0 0 16px 0;
             border-bottom: 2px solid #e2dcd6;
             padding-bottom: 16px;
         }
         
         .section-link {
-            font-family: 'Work Sans', sans-serif;
+            display: block;
+            color: #1b0757;
+            font-family: Arial, sans-serif;
             font-weight: 500;
-            font-style: normal;
             font-size: 16px;
             line-height: 18px;
             letter-spacing: -0.5px;
-            color: #1b0757;
             text-decoration: underline;
-            display: block;
-            margin: 0 0 16px 0;
-            border-bottom: 1px solid #e2dcd6;
-            padding-bottom: 16px;
-            transition: color 0.3s ease;
-        }
-        
-        .section-link:hover {
-            color: #3498db;
+            margin-bottom: 8px;
         }
         
         .section-link:last-child {
+            margin-bottom: 0;
             border-bottom: none;
         }
         
         .search-name {
             color: #3f39b2;
+        }
+        
+        .cards-section {
+            background-color: #ffffff;
+            border-top: 4px solid #d10077;
+            margin-bottom: 32px;
+        }
+        
+        .header-card {
+            background-color: #f1edea;
+            padding: 16px;
+        }
+        
+        .header-card h2 {
+            margin: 0;
+            color: #1b0757;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            padding: 16px 16px 0 16px;
         }
         
         .robotics-search {
@@ -133,79 +99,24 @@
         }
         
         .metrics-row {
-            display: flex;
-            justify-content: space-between;
             margin-top: 16px;
             padding: 0 16px;
         }
         
         .metric-column {
-            flex: 0 0 auto;
-            text-align: center;
-        }
-        
-        .metric-column:nth-child(1),
-        .metric-column:nth-child(2),
-        .metric-column:nth-child(3) {
+            display: inline-block;
+            vertical-align: top;
+            width: 30%;
             text-align: left;
+            margin-right: 2%;
         }
         
-        /* Responsive metrics row for mobile */
-        @media (max-width: 768px) {
-            .metrics-row {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .metric-column {
-                flex: none;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-            }
-            
-            .metric-left {
-                flex: 0 0 40%;
-            }
-            
-            .metric-right {
-                flex: 0 0 60%;
-                text-align: left;
-                margin-left: 1rem;
-            }
-            
-            .metric-value {
-                border-bottom: none !important;
-            }
-            
-            .metric-column {
-                border-bottom: 1px solid #6f6e78;
-                padding-bottom: 8px;
-            }
-            
-            .metric-subtitle {
-                font-size: 14px;
-                margin-top: 8px;
-            }
-            
-            .metric-detail {
-                font-size: 14px;
-                margin-top: 4px;
-            }
-            
-            .metric-label {
-                font-family: 'Open Sans', sans-serif !important;
-                font-weight: 700 !important;
-                font-style: normal !important;
-                font-size: 10px !important;
-                text-transform: uppercase !important;
-                letter-spacing: 0.08em !important;
-            }
+        .metric-column:last-child {
+            margin-right: 0;
         }
         
         .metric-label {
-            font-family: 'Work Sans', sans-serif;
+            font-family: Arial, sans-serif;
             font-weight: 500;
             font-size: 14px;
             color: #1b0757;
@@ -214,127 +125,52 @@
         }
         
         .metric-value {
-            font-family: 'Open Sans', sans-serif;
+            font-family: Arial, sans-serif;
             font-weight: 600;
             font-size: 56px;
             line-height: 56px;
             color: #1b0757;
             margin-top: 8px;
-            border-bottom: 1px solid #6f6e78;
+            border-bottom: 2px solid #6f6e78;
             padding-bottom: 8px;
             width: 100%;
         }
         
         .metric-subtitle {
-            font-family: 'Open Sans', sans-serif;
+            font-family: Arial, sans-serif;
             font-weight: 400;
             font-size: 12px;
             color: #888;
             margin-top: 4px;
-            text-transform: none;
         }
         
         .metric-detail {
-            font-family: 'Work Sans', sans-serif;
+            font-family: Arial, sans-serif;
             font-weight: 400;
             font-size: 12px;
             color: #1b0757;
             margin-top: 2px;
-            text-transform: none;
         }
         
         .underline {
             text-decoration: underline;
         }
         
-        .cards-section:first-of-type .header-card h2 {
-            color: #d10077;
-        }
-        
-        .header-card {
-            background-color: #f1edea;
-            padding: 16px;
-            margin: 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        .header-card h2 {
-            margin: 0;
-            color: #1b0757;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
-            font-style: normal;
-            font-size: 20px;
-            line-height: 24px;
-            padding: 16px 16px 0 16px;
-            border-bottom: none;
-        }
-        
-        .cards-section {
-            background: white;
-            padding: 0;
-            border-radius: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-            border-top: 4px solid #d10077;
-        }
-        
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-        }
-        
-        .button {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            font-weight: 500;
-            min-height: 44px;
-            line-height: 1.2;
-        }
-        
-        .button:hover {
-            background-color: #2980b9;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #2c3e50;
-            color: white;
-            border-radius: 8px;
-        }
-        
-        /* Cards Grid Styles */
         .cards-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            padding: 0 2rem;
+            padding: 0;
         }
         
         .card {
-            background: white;
-            border: none;
+            background-color: #ffffff;
             border-bottom: 1px solid #e1e8ed;
-            border-radius: 0;
-            transition: all 0.3s ease;
+            padding: 16px;
         }
         
-
+        .company-logo {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 16px;
+        }
         
         .logo-placeholder {
             width: 60px;
@@ -342,56 +178,153 @@
             background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
             font-weight: 600;
             font-size: 18px;
         }
         
         .company-header {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 80px);
         }
         
         .company-title-section {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            margin-bottom: 8px;
         }
         
         .company-name {
             color: #3f39b2;
-            margin-bottom: 0;
-            font-family: 'Open Sans', sans-serif;
+            font-family: Arial, sans-serif;
             font-weight: 600;
-            font-style: normal;
             font-size: 14px;
             line-height: 20px;
+            margin: 0 16px 0 0;
+            display: inline-block;
+            vertical-align: middle;
         }
         
         .company-tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 0;
+            display: inline-block;
+            vertical-align: middle;
         }
         
-        /* Mobile: company-title-section as column */
-        @media (max-width: 768px) {
+        .new-match-tag {
+            background-color: #dee3ff;
+            color: #1b0757;
+            padding: 4px 8px;
+            border-radius: 50px;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 16px;
+            margin: 0 4px 0 0;
+            display: inline-block;
+        }
+        
+        .actionability-tag {
+            background-color: #ddf8ee;
+            color: #0b5804;
+            padding: 4px 8px;
+            border-radius: 50px;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 16px;
+            margin: 0 4px 0 0;
+            display: inline-block;
+        }
+        
+        .company-meta {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        .separator {
+            margin: 0 8px;
+            color: #ccc;
+        }
+        
+        .company-info {
+            margin-top: 16px;
+        }
+        
+        .sub-industries {
+            margin-bottom: 12px;
+        }
+        
+        .sub-industry-tag {
+            background-color: #f1edea;
+            color: #495057;
+            padding: 4px 8px;
+            border-radius: 50px;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 16px;
+            margin: 0 4px 4px 0;
+            display: inline-block;
+        }
+        
+        .company-description {
+            color: #555;
+            font-family: Arial, sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            margin: 0;
+        }
+        
+        .footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        
+        /* Mobile responsive styles */
+        @media only screen and (max-width: 600px) {
+            .container {
+                max-width: 100%;
+            }
+            
+            .metric-column {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 16px;
+            }
+            
+            .company-logo {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 16px;
+            }
+            
+            .company-header {
+                display: block;
+                width: 100%;
+            }
+            
             .company-title-section {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
+                margin-bottom: 16px;
             }
             
             .company-name {
-                margin-bottom: 0.25rem;
+                display: block;
+                margin: 0 0 8px 0;
             }
             
             .company-tags {
-                margin-bottom: 0.25rem;
+                display: block;
             }
             
             .company-meta {
@@ -406,541 +339,191 @@
                 border-bottom: none;
             }
         }
-        
-        .new-match-tag {
-            background-color: #dee3ff;
-            color: #1b0757;
-            padding: 0.15rem 0.4rem;
-            border-radius: 50px;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
-            font-size: 10px;
-            line-height: 16px;
-            margin: 0;
-            white-space: nowrap;
-        }
-        
-        .actionability-tag {
-            background-color: #ddf8ee;
-            color: #0b5804;
-            padding: 0.15rem 0.4rem;
-            border-radius: 50px;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
-            font-size: 10px;
-            line-height: 16px;
-            margin: 0;
-            white-space: nowrap;
-        }
-        
-        .company-meta {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 10px;
-            line-height: 16px;
-            font-weight: 400;
-            color: #666;
-        }
-        
-        .separator {
-            margin: 0;
-            color: #ccc;
-        }
-        
-        .sub-industries {
-            margin-bottom: 0.75rem;
-        }
-        
-
-        
-        .company-description {
-            color: #555;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 12px;
-            line-height: 16px;
-            margin: 0;
-        }
-        
-        .tag-toggle {
-            display: none;
-        }
-        
-        .sub-industries {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            align-items: center;
-        }
-        
-        .sub-industry-tag {
-            display: inline-block;
-            background: #f1edea;
-            color: #495057;
-            padding: 0.25rem 0.5rem;
-            border-radius: 50px;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
-            font-size: 10px;
-            line-height: 16px;
-            margin: 0;
-            white-space: nowrap;
-        }
-        
-        .show-more-tags {
-            color: #3f39b2;
-            cursor: pointer;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin: 0;
-            user-select: none;
-            white-space: nowrap;
-        }
-        
-        .show-more-tags:hover {
-            text-decoration: underline;
-        }
-        
-        /* Show first 4 tags by default, hide the rest */
-        .sub-industry-tag:nth-of-type(n+5) {
-            display: none;
-        }
-        
-        /* Show all tags when radio is checked */
-        .tag-toggle:checked ~ .sub-industry-tag:nth-of-type(n+5) {
-            display: inline-block;
-        }
-        
-        /* Hide show-more label when expanded */
-        .tag-toggle:checked ~ .show-more-tags {
-            display: none;
-        }
-        
-
-        
-        .card:hover {
-            border-bottom-color: #3498db;
-        }
-        
-        /* Desktop layout: logo + header in first row, info in second row */
-        .card-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .company-top {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .company-logo {
-            flex: 0 0 auto;
-        }
-        
-        .company-info {
-            width: 100%;
-        }
-        
-        /* Mobile responsive styles for company cards */
-        @media (max-width: 768px) {
-            .card-content {
-                flex-direction: column;
-            }
-            
-            .company-header {
-                display: flex;
-                align-items: flex-start;
-                margin-bottom: 1rem;
-                flex-direction: column;
-            }
-            
-            .company-logo {
-                flex: 0 0 auto;
-                margin-bottom: 0;
-            }
-            
-            .company-info {
-                flex: 1;
-            }
-            
-            .sub-industries {
-                margin-bottom: 1rem;
-                width: 100%;
-            }
-            
-            .company-description {
-                margin-top: 0;
-                width: 100%;
-            }
-        }
-        
-        .card-header {
-            margin-bottom: 1rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 2px solid #f0f0f0;
-        }
-        
-        .card-header h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-        
-        .industry {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .card-content p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        
-        .card-meta {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
-        
-        .card-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header p {
-                font-size: 1rem;
-            }
-            
-            main {
-                padding: 1rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            .button {
-                display: block;
-                width: 100%;
-                text-align: center;
-                margin-top: 1rem;
-            }
-            
-            .cards-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 5px;
-            }
-            
-            header {
-                padding: 1rem 0;
-                margin-bottom: 1rem;
-            }
-            
-            header h1 {
-                font-size: 1.5rem;
-            }
-            
-            main {
-                padding: 0.8rem;
-                margin-bottom: 1rem;
-            }
-            
-            section {
-                margin-bottom: 1.5rem;
-            }
-            
-            h2 {
-                font-size: 1.3rem;
-            }
-            
-            p {
-                font-size: 0.9rem;
-            }
-            
-            ul {
-                padding-left: 1.5rem;
-            }
-            
-            .card-header h3 {
-                font-size: 1.2rem;
-            }
-            
-            .industry {
-                font-size: 0.7rem;
-                padding: 0.25rem 0.6rem;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Welcome to Your Website</h1>
-            <p>A modern HTML template to get you started</p>
-        </header>
+        <div class="top-section">
+            <h2 class="section-header">Summary of updates</h2>
+            <a href="#" class="section-link">→ 2 updates in your Saved search '<span class="search-name">Robotics Healthcare</span>'</a>
+            <a href="#" class="section-link">→ 23 updates in your Saved search '<span class="search-name">Healthcare US</span>'</a>
+        </div>
         
-        <main>
-            <section class="top-section">
-                <h2 class="section-header">Summary of updates</h2>
-                <a href="#" class="section-link">→ 2 updates in your Saved search '<span class="search-name">Robotics Healthcare</span>'</a>
-                <a href="#" class="section-link">→ 23 updates in your Saved search '<span class="search-name">Healthcare US</span>'</a>
-            </section>
-            
-            <section class="cards-section">
-                <div class="header-card">
-                    <h2>Updates to your Saved search <span class="robotics-search">'Robotics Healthcare'</span></h2>
-                    <div class="metrics-row">
-                        <div class="metric-column">
-                            <div class="metric-left">
-                                <span class="metric-label">New matches</span>
-                                <div class="metric-value">24</div>
-                            </div>
-                            <div class="metric-right">
-                                <div class="metric-subtitle">Grouped by location</div>
-                                <div class="metric-detail"><span class="underline">12 USA</span></div>
-                                <div class="metric-detail"><span class="underline">8 Central and East Europe</span></div>
-                                <div class="metric-detail"><span class="underline">2 West Europe</span></div>
-                            </div>
-                        </div>
-                        <div class="metric-column">
-                            <div class="metric-left">
-                                <span class="metric-label">New deals</span>
-                                <div class="metric-value">5</div>
-                            </div>
-                            <div class="metric-right">
-                                <div class="metric-subtitle">Grouped by location</div>
-                                <div class="metric-detail"><span class="underline">12 USA</span></div>
-                                <div class="metric-detail"><span class="underline">8 Central and East Europe</span></div>
-                                <div class="metric-detail"><span class="underline">2 West Europe</span></div>
-                            </div>
-                        </div>
-                        <div class="metric-column">
-                            <div class="metric-left">
-                                <span class="metric-label">Actionability</span>
-                                <div class="metric-value">2</div>
-                            </div>
-                            <div class="metric-right">
-                                <div class="metric-subtitle">Grouped by location</div>
-                                <div class="metric-detail"><span class="underline">1 US</span></div>
-                                <div class="metric-detail"><span class="underline">1 West Europe</span></div>
-                            </div>
-                        </div>
+        <div class="cards-section">
+            <div class="header-card">
+                <h2>Updates to your Saved search <span class="robotics-search">'Robotics Healthcare'</span></h2>
+                <div class="metrics-row">
+                    <div class="metric-column">
+                        <div class="metric-label">New matches</div>
+                        <div class="metric-value">24</div>
+                        <div class="metric-subtitle">Grouped by location</div>
+                        <div class="metric-detail"><span class="underline">12 USA</span></div>
+                        <div class="metric-detail"><span class="underline">8 Central and East Europe</span></div>
+                        <div class="metric-detail"><span class="underline">2 West Europe</span></div>
+                    </div>
+                    <div class="metric-column">
+                        <div class="metric-label">New deals</div>
+                        <div class="metric-value">5</div>
+                        <div class="metric-subtitle">Grouped by location</div>
+                        <div class="metric-detail"><span class="underline">12 USA</span></div>
+                        <div class="metric-detail"><span class="underline">8 Central and East Europe</span></div>
+                        <div class="metric-detail"><span class="underline">2 West Europe</span></div>
+                    </div>
+                    <div class="metric-column">
+                        <div class="metric-label">Actionability</div>
+                        <div class="metric-value">2</div>
+                        <div class="metric-subtitle">Grouped by location</div>
+                        <div class="metric-detail"><span class="underline">1 US</span></div>
+                        <div class="metric-detail"><span class="underline">1 West Europe</span></div>
                     </div>
                 </div>
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="company-top">
-                                <div class="company-logo">
-                                    <div class="logo-placeholder">RM</div>
-                                </div>
-                                                            <div class="company-header">
-                                <div class="company-title-section">
-                                    <h3 class="company-name">RoboMed Solutions</h3>
-                                    <div class="company-tags">
-                                        <span class="new-match-tag">New match</span>
-                                    </div>
-                                </div>
-                                <div class="company-meta">
-                                    <span class="location">Boston, MA</span>
-                                    <span class="separator">|</span>
-                                    <span class="website">robomed.com</span>
-                                </div>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="company-logo">
+                        <div class="logo-placeholder">RM</div>
+                    </div>
+                    <div class="company-header">
+                        <div class="company-title-section">
+                            <h3 class="company-name">RoboMed Solutions</h3>
+                            <div class="company-tags">
+                                <span class="new-match-tag">New match</span>
                             </div>
-                            </div>
-                            <div class="company-info">
-                                <div class="sub-industries">
-                                    <input type="radio" name="robomed-tags" id="robomed-toggle" class="tag-toggle">
-                                    <span class="sub-industry-tag">Surgical Robotics</span>
-                                    <span class="sub-industry-tag">Medical Automation</span>
-                                    <span class="sub-industry-tag">AI Diagnostics</span>
-                                    <label for="robomed-toggle" class="show-more-tags" style="display: none;"></label>
-                                </div>
-                                <p class="company-description">Pioneering robotic surgical systems and medical automation technologies. Our advanced robotics enhance precision in surgical procedures and improve patient outcomes through minimally invasive techniques.</p>
-                            </div>
+                        </div>
+                        <div class="company-meta">
+                            <span class="location">Boston, MA</span><span class="separator">|</span><span class="website">robomed.com</span>
                         </div>
                     </div>
-                    
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="company-top">
-                                <div class="company-logo">
-                                    <div class="logo-placeholder">HT</div>
-                                </div>
-                                                            <div class="company-header">
-                                <div class="company-title-section">
-                                    <h3 class="company-name">HealthTech Robotics</h3>
-                                    <div class="company-tags">
-                                        <span class="actionability-tag">Actionability</span>
-                                    </div>
-                                </div>
-                                <div class="company-meta">
-                                    <span class="location">San Diego, CA</span>
-                                    <span class="separator">|</span>
-                                    <span class="website">healthtechrobotics.com</span>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="company-info">
-                                <div class="sub-industries">
-                                    <input type="radio" name="healthtech-tags" id="healthtech-toggle" class="tag-toggle">
-                                    <span class="sub-industry-tag">Rehabilitation</span>
-                                    <span class="sub-industry-tag">Physical Therapy</span>
-                                    <span class="sub-industry-tag">Patient Recovery</span>
-                                    <span class="sub-industry-tag">Robotic Systems</span>
-                                    <span class="sub-industry-tag">Personalized Therapy</span>
-                                    <label for="healthtech-toggle" class="show-more-tags" style="display: none;"></label>
-                                </div>
-                                <p class="company-description">Innovative robotic rehabilitation and physical therapy solutions. Our robotic systems help patients recover faster and more effectively through personalized therapy programs.</p>
-                            </div>
+                    <div class="company-info">
+                        <div class="sub-industries">
+                            <span class="sub-industry-tag">Surgical Robotics</span>
+                            <span class="sub-industry-tag">Medical Automation</span>
+                            <span class="sub-industry-tag">AI Diagnostics</span>
                         </div>
+                        <p class="company-description">Pioneering robotic surgical systems and medical automation technologies. Our advanced robotics enhance precision in surgical procedures and improve patient outcomes through minimally invasive techniques.</p>
                     </div>
                 </div>
-            </section>
-            
-            <section class="cards-section">
-                <div class="header-card">
-                    <h2>Updates to your Saved search <span class="healthcare-us-search">'Healthcare US'</span></h2>
-                    <div class="metrics-row">
-                        <div class="metric-column">
-                            <div class="metric-left">
-                                <span class="metric-label">New matches</span>
-                                <div class="metric-value">18</div>
-                            </div>
-                            <div class="metric-right">
-                                <div class="metric-subtitle">Grouped by location</div>
-                                <div class="metric-detail"><span class="underline">10 USA</span></div>
-                                <div class="metric-detail"><span class="underline">5 Canada</span></div>
-                                <div class="metric-detail"><span class="underline">3 Mexico</span></div>
+                
+                <div class="card">
+                    <div class="company-logo">
+                        <div class="logo-placeholder">HT</div>
+                    </div>
+                    <div class="company-header">
+                        <div class="company-title-section">
+                            <h3 class="company-name">HealthTech Robotics</h3>
+                            <div class="company-tags">
+                                <span class="actionability-tag">Actionability</span>
                             </div>
                         </div>
-                        <div class="metric-column">
-                            <div class="metric-left">
-                                <span class="metric-label">New deals</span>
-                                <div class="metric-value">7</div>
-                            </div>
-                            <div class="metric-right">
-                                <div class="metric-subtitle">Grouped by location</div>
-                                <div class="metric-detail"><span class="underline">10 USA</span></div>
-                                <div class="metric-detail"><span class="underline">5 Canada</span></div>
-                                <div class="metric-detail"><span class="underline">3 Mexico</span></div>
-                            </div>
+                        <div class="company-meta">
+                            <span class="location">San Diego, CA</span><span class="separator">|</span><span class="website">healthtechrobotics.com</span>
                         </div>
-                        <div class="metric-column">
-                            <div class="metric-left">
-                                <span class="metric-label">Actionability</span>
-                                <div class="metric-value">4</div>
-                            </div>
-                            <div class="metric-right">
-                                <div class="metric-subtitle">Grouped by location</div>
-                                <div class="metric-detail"><span class="underline">3 US</span></div>
-                                <div class="metric-detail"><span class="underline">1 Canada</span></div>
-                            </div>
+                    </div>
+                    <div class="company-info">
+                        <div class="sub-industries">
+                            <span class="sub-industry-tag">Rehabilitation</span>
+                            <span class="sub-industry-tag">Physical Therapy</span>
+                            <span class="sub-industry-tag">Patient Recovery</span>
+                            <span class="sub-industry-tag">Robotic Systems</span>
+                            <span class="sub-industry-tag">Personalized Therapy</span>
                         </div>
+                        <p class="company-description">Innovative robotic rehabilitation and physical therapy solutions. Our robotic systems help patients recover faster and more effectively through personalized therapy programs.</p>
                     </div>
                 </div>
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="company-top">
-                                <div class="company-logo">
-                                    <div class="logo-placeholder">US</div>
-                                </div>
-                                                            <div class="company-header">
-                                <div class="company-title-section">
-                                    <h3 class="company-name">US Health Systems</h3>
-                                    <div class="company-tags">
-                                        <span class="new-match-tag">New match</span>
-                                        <span class="actionability-tag">Actionability</span>
-                                    </div>
-                                </div>
-                                <div class="company-meta">
-                                    <span class="location">Chicago, IL</span>
-                                    <span class="separator">|</span>
-                                    <span class="website">ushealthsystems.com</span>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="company-info">
-                                <div class="sub-industries">
-                                    <input type="radio" name="ushealth-tags" id="ushealth-toggle" class="tag-toggle">
-                                    <span class="sub-industry-tag">Healthcare Management</span>
-                                    <span class="sub-industry-tag">Operations</span>
-                                    <span class="sub-industry-tag">Patient Care</span>
-                                    <span class="sub-industry-tag">Streamlined Processes</span>
-                                    <span class="sub-industry-tag">Optimization</span>
-                                    <span class="sub-industry-tag">US Healthcare</span>
-                                    <label for="ushealth-toggle" class="show-more-tags">+2</label>
-                                </div>
-                                <p class="company-description">Comprehensive healthcare management solutions for US healthcare providers. We streamline operations, improve patient care, and optimize healthcare delivery across the United States.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="company-top">
-                                <div class="company-logo">
-                                    <div class="logo-placeholder">MT</div>
-                                </div>
-                                <div class="company-header">
-                                    <h3 class="company-name">MedTech Innovations</h3>
-                                    <div class="company-meta">
-                                        <span class="location">Atlanta, GA</span>
-                                        <span class="separator">|</span>
-                                        <span class="website">medtechinnovations.com</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="company-info">
-                                <div class="sub-industries">
-                                    <input type="radio" name="medtech-tags" id="medtech-toggle" class="tag-toggle">
-                                    <span class="sub-industry-tag">Medical Devices</span>
-                                    <span class="sub-industry-tag">Healthcare Tech</span>
-                                    <span class="sub-industry-tag">Innovation</span>
-                                    <span class="sub-industry-tag">Critical Challenges</span>
-                                    <span class="sub-industry-tag">Patient Outcomes</span>
-                                    <span class="sub-industry-tag">Nationwide</span>
-                                    <label for="medtech-toggle" class="show-more-tags">+2</label>
-                                </div>
-                                <p class="company-description">Cutting-edge medical device development and healthcare technology solutions. Our innovations address critical healthcare challenges and improve patient outcomes nationwide.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+            </div>
+        </div>
         
-        <footer>
+        <div class="cards-section">
+            <div class="header-card">
+                <h2>Updates to your Saved search <span class="healthcare-us-search">'Healthcare US'</span></h2>
+                <div class="metrics-row">
+                    <div class="metric-column">
+                        <div class="metric-label">New matches</div>
+                        <div class="metric-value">18</div>
+                        <div class="metric-subtitle">Grouped by location</div>
+                        <div class="metric-detail"><span class="underline">10 USA</span></div>
+                        <div class="metric-detail"><span class="underline">5 Canada</span></div>
+                        <div class="metric-detail"><span class="underline">3 Mexico</span></div>
+                    </div>
+                    <div class="metric-column">
+                        <div class="metric-label">New deals</div>
+                        <div class="metric-value">7</div>
+                        <div class="metric-subtitle">Grouped by location</div>
+                        <div class="metric-detail"><span class="underline">10 USA</span></div>
+                        <div class="metric-detail"><span class="underline">5 Canada</span></div>
+                        <div class="metric-detail"><span class="underline">3 Mexico</span></div>
+                    </div>
+                    <div class="metric-column">
+                        <div class="metric-label">Actionability</div>
+                        <div class="metric-value">4</div>
+                        <div class="metric-subtitle">Grouped by location</div>
+                        <div class="metric-detail"><span class="underline">3 US</span></div>
+                        <div class="metric-detail"><span class="underline">1 Canada</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="company-logo">
+                        <div class="logo-placeholder">US</div>
+                    </div>
+                    <div class="company-header">
+                        <div class="company-title-section">
+                            <h3 class="company-name">US Health Systems</h3>
+                            <div class="company-tags">
+                                <span class="new-match-tag">New match</span>
+                                <span class="actionability-tag">Actionability</span>
+                            </div>
+                        </div>
+                        <div class="company-meta">
+                            <span class="location">Chicago, IL</span><span class="separator">|</span><span class="website">ushealthsystems.com</span>
+                        </div>
+                    </div>
+                    <div class="company-info">
+                        <div class="sub-industries">
+                            <span class="sub-industry-tag">Healthcare Management</span>
+                            <span class="sub-industry-tag">Operations</span>
+                            <span class="sub-industry-tag">Patient Care</span>
+                            <span class="sub-industry-tag">Streamlined Processes</span>
+                            <span class="sub-industry-tag">Optimization</span>
+                            <span class="sub-industry-tag">US Healthcare</span>
+                        </div>
+                        <p class="company-description">Comprehensive healthcare management solutions for US healthcare providers. We streamline operations, improve patient care, and optimize healthcare delivery across the United States.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="company-logo">
+                        <div class="logo-placeholder">MT</div>
+                    </div>
+                    <div class="company-header">
+                        <div class="company-title-section">
+                            <h3 class="company-name">MedTech Innovations</h3>
+                            <div class="company-tags">
+                            </div>
+                        </div>
+                        <div class="company-meta">
+                            <span class="location">Atlanta, GA</span><span class="separator">|</span><span class="website">medtechinnovations.com</span>
+                        </div>
+                    </div>
+                    <div class="company-info">
+                        <div class="sub-industries">
+                            <span class="sub-industry-tag">Medical Devices</span>
+                            <span class="sub-industry-tag">Healthcare Tech</span>
+                            <span class="sub-industry-tag">Innovation</span>
+                            <span class="sub-industry-tag">Critical Challenges</span>
+                            <span class="sub-industry-tag">Patient Outcomes</span>
+                            <span class="sub-industry-tag">Nationwide</span>
+                        </div>
+                        <p class="company-description">Cutting-edge medical device development and healthcare technology solutions. Our innovations address critical healthcare challenges and improve patient outcomes nationwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
             <p>&copy; 2024 Your Website. All rights reserved.</p>
-        </footer>
+        </div>
     </div>
 </body>
 </html>
