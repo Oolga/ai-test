@@ -26,17 +26,6 @@
             position: relative;
         }
         
-        .top-section::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 16px;
-            width: 24.01px;
-            height: 44.11px;
-            background-color: #1b0757;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
-        }
-        
         .section-header {
             color: #1b0757;
             font-family: Arial, sans-serif;
@@ -44,8 +33,6 @@
             font-size: 20px;
             line-height: 24px;
             margin: 0 0 16px 0;
-            border-bottom: 2px solid #e2dcd6;
-            padding-bottom: 16px;
         }
         
         .section-link {
@@ -58,6 +45,8 @@
             letter-spacing: -0.5px;
             text-decoration: underline;
             margin-bottom: 8px;
+            padding-top: 8px;
+            padding-bottom: 8px;
         }
         
         .section-link:last-child {
@@ -297,10 +286,20 @@
             }
             
             .metric-column {
-                display: block;
-                width: 100%;
-                margin-right: 0;
-                margin-bottom: 16px;
+                display: block !important;
+                width: 100% !important;
+                margin-right: 0 !important;
+                margin-bottom: 16px !important;
+                border-bottom: 2px solid #6f6e78 !important;
+                padding-bottom: 16px !important;
+            }
+            
+            .metric-column:last-child {
+                border-bottom: none !important;
+            }
+            
+            .metric-value {
+                border-bottom: none !important;
             }
             
             .company-logo {
@@ -334,190 +333,251 @@
             .actionability-tag {
                 border-bottom: none;
             }
-            
-            .metric-column:last-child {
-                border-bottom: none;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="top-section">
-            <h2 class="section-header">Summary of updates</h2>
-            <a href="#" class="section-link">→ 2 updates in your Saved search '<span class="search-name">Robotics Healthcare</span>'</a>
-            <a href="#" class="section-link">→ 23 updates in your Saved search '<span class="search-name">Healthcare US</span>'</a>
+        <table class="top-section" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #ffffff; border-top: 4px solid #1b0757; padding: 16px; padding-top: 0; position: relative;">
+            <tr>
+                <td style="position: relative;">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <tr>
+                            <td style="position: relative;">
+                                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                    <tr>
+                                        <td style="width: calc(100% - 40px);">
+                                            <h2 class="section-header" style="padding-top: 16px;">Summary of updates</h2>
+                                        </td>
+                                        <td style="width: 40px; text-align: right; vertical-align: top;">
+                                            <table cellpadding="0" cellspacing="0" border="0" style="width: 24.01px; height: 44.11px;">
+                                                <tr>
+                                                    <td style="background-color: #1b0757; width: 24.01px; height: 44.11px;"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="border-bottom: 2px solid #e2dcd6; height: 2px; padding: 0;"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" class="section-link">→ 2 updates in your Saved search '<span class="search-name">Robotics Healthcare</span>'</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid #e2dcd6; height: 1px; padding: 0;"></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" class="section-link">→ 23 updates in your Saved search '<span class="search-name">Healthcare US</span>'</a>
+                </td>
+            </tr>
+        </table>
+        
+        <div class="cards-section">
+            <table class="header-card" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1edea; padding: 16px;">
+                <tr>
+                    <td>
+                        <h2>Updates to your Saved search <span class="robotics-search">'Robotics Healthcare'</span></h2>
+                        <table class="metrics-row" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 16px;">
+                            <tr>
+                                <td class="metric-column" style="display: inline-block; vertical-align: top; width: 30%; text-align: left; margin-right: 2%;">
+                                    <div class="metric-label">New matches</div>
+                                    <div class="metric-value">24</div>
+                                    <div class="metric-subtitle">Grouped by location</div>
+                                    <div class="metric-detail"><span class="underline">12 USA</span></div>
+                                    <div class="metric-detail"><span class="underline">8 Central and East Europe</span></div>
+                                    <div class="metric-detail"><span class="underline">2 West Europe</span></div>
+                                </td>
+                                <td class="metric-column" style="display: inline-block; vertical-align: top; width: 30%; text-align: left; margin-right: 2%;">
+                                    <div class="metric-label">New deals</div>
+                                    <div class="metric-value">5</div>
+                                    <div class="metric-subtitle">Grouped by location</div>
+                                    <div class="metric-detail"><span class="underline">12 USA</span></div>
+                                    <div class="metric-detail"><span class="underline">8 Central and East Europe</span></div>
+                                    <div class="metric-detail"><span class="underline">2 West Europe</span></div>
+                                </td>
+                                <td class="metric-column" style="display: inline-block; vertical-align: top; width: 30%; text-align: left; margin-right: 0;">
+                                    <div class="metric-label">Actionability</div>
+                                    <div class="metric-value">2</div>
+                                    <div class="metric-subtitle">Grouped by location</div>
+                                    <div class="metric-detail"><span class="underline">1 US</span></div>
+                                    <div class="metric-detail"><span class="underline">1 West Europe</span></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div class="cards-grid">
+                <table class="card" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #ffffff; border-bottom: 1px solid #e1e8ed; padding: 16px;">
+                    <tr>
+                        <td style="width: 76px; vertical-align: top; padding-right: 16px;">
+                            <div class="logo-placeholder">RM</div>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div class="company-header">
+                                <div class="company-title-section">
+                                    <h3 class="company-name">RoboMed Solutions</h3>
+                                    <div class="company-tags">
+                                        <span class="new-match-tag">New match</span>
+                                    </div>
+                                </div>
+                                <div class="company-meta">
+                                    <span class="location">Boston, MA</span><span class="separator">|</span><span class="website">robomed.com</span>
+                                </div>
+                            </div>
+                            <div class="company-info">
+                                <div class="sub-industries">
+                                    <span class="sub-industry-tag">Surgical Robotics</span>
+                                    <span class="sub-industry-tag">Medical Automation</span>
+                                    <span class="sub-industry-tag">AI Diagnostics</span>
+                                </div>
+                                <p class="company-description">Pioneering robotic surgical systems and medical automation technologies. Our advanced robotics enhance precision in surgical procedures and improve patient outcomes through minimally invasive techniques.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <table class="card" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #ffffff; border-bottom: 1px solid #e1e8ed; padding: 16px;">
+                    <tr>
+                        <td style="width: 76px; vertical-align: top; padding-right: 16px;">
+                            <div class="logo-placeholder">HT</div>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div class="company-header">
+                                <div class="company-title-section">
+                                    <h3 class="company-name">HealthTech Robotics</h3>
+                                    <div class="company-tags">
+                                        <span class="actionability-tag">Actionability</span>
+                                    </div>
+                                </div>
+                                <div class="company-meta">
+                                    <span class="location">San Diego, CA</span><span class="separator">|</span><span class="website">healthtechrobotics.com</span>
+                                </div>
+                            </div>
+                            <div class="company-info">
+                                <div class="sub-industries">
+                                    <span class="sub-industry-tag">Rehabilitation</span>
+                                    <span class="sub-industry-tag">Physical Therapy</span>
+                                    <span class="sub-industry-tag">Patient Recovery</span>
+                                    <span class="sub-industry-tag">Robotic Systems</span>
+                                    <span class="sub-industry-tag">Personalized Therapy</span>
+                                </div>
+                                <p class="company-description">Innovative robotic rehabilitation and physical therapy solutions. Our robotic systems help patients recover faster and more effectively through personalized therapy programs.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
         
         <div class="cards-section">
-            <div class="header-card">
-                <h2>Updates to your Saved search <span class="robotics-search">'Robotics Healthcare'</span></h2>
-                <div class="metrics-row">
-                    <div class="metric-column">
-                        <div class="metric-label">New matches</div>
-                        <div class="metric-value">24</div>
-                        <div class="metric-subtitle">Grouped by location</div>
-                        <div class="metric-detail"><span class="underline">12 USA</span></div>
-                        <div class="metric-detail"><span class="underline">8 Central and East Europe</span></div>
-                        <div class="metric-detail"><span class="underline">2 West Europe</span></div>
-                    </div>
-                    <div class="metric-column">
-                        <div class="metric-label">New deals</div>
-                        <div class="metric-value">5</div>
-                        <div class="metric-subtitle">Grouped by location</div>
-                        <div class="metric-detail"><span class="underline">12 USA</span></div>
-                        <div class="metric-detail"><span class="underline">8 Central and East Europe</span></div>
-                        <div class="metric-detail"><span class="underline">2 West Europe</span></div>
-                    </div>
-                    <div class="metric-column">
-                        <div class="metric-label">Actionability</div>
-                        <div class="metric-value">2</div>
-                        <div class="metric-subtitle">Grouped by location</div>
-                        <div class="metric-detail"><span class="underline">1 US</span></div>
-                        <div class="metric-detail"><span class="underline">1 West Europe</span></div>
-                    </div>
-                </div>
-            </div>
+            <table class="header-card" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1edea; padding: 16px;">
+                <tr>
+                    <td>
+                        <h2>Updates to your Saved search <span class="healthcare-us-search">'Healthcare US'</span></h2>
+                        <table class="metrics-row" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 16px;">
+                            <tr>
+                                <td class="metric-column" style="display: inline-block; vertical-align: top; width: 30%; text-align: left; margin-right: 2%;">
+                                    <div class="metric-label">New matches</div>
+                                    <div class="metric-value">18</div>
+                                    <div class="metric-subtitle">Grouped by location</div>
+                                    <div class="metric-detail"><span class="underline">10 USA</span></div>
+                                    <div class="metric-detail"><span class="underline">5 Canada</span></div>
+                                    <div class="metric-detail"><span class="underline">3 Mexico</span></div>
+                                </td>
+                                <td class="metric-column" style="display: inline-block; vertical-align: top; width: 30%; text-align: left; margin-right: 2%;">
+                                    <div class="metric-label">New deals</div>
+                                    <div class="metric-value">7</div>
+                                    <div class="metric-subtitle">Grouped by location</div>
+                                    <div class="metric-detail"><span class="underline">10 USA</span></div>
+                                    <div class="metric-detail"><span class="underline">5 Canada</span></div>
+                                    <div class="metric-detail"><span class="underline">3 Mexico</span></div>
+                                </td>
+                                <td class="metric-column" style="display: inline-block; vertical-align: top; width: 30%; text-align: left; margin-right: 0;">
+                                    <div class="metric-label">Actionability</div>
+                                    <div class="metric-value">4</div>
+                                    <div class="metric-subtitle">Grouped by location</div>
+                                    <div class="metric-detail"><span class="underline">3 US</span></div>
+                                    <div class="metric-detail"><span class="underline">1 Canada</span></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
             <div class="cards-grid">
-                <div class="card">
-                    <div class="company-logo">
-                        <div class="logo-placeholder">RM</div>
-                    </div>
-                    <div class="company-header">
-                        <div class="company-title-section">
-                            <h3 class="company-name">RoboMed Solutions</h3>
-                            <div class="company-tags">
-                                <span class="new-match-tag">New match</span>
+                <table class="card" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #ffffff; border-bottom: 1px solid #e1e8ed; padding: 16px;">
+                    <tr>
+                        <td style="width: 76px; vertical-align: top; padding-right: 16px;">
+                            <div class="logo-placeholder">US</div>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div class="company-header">
+                                <div class="company-title-section">
+                                    <h3 class="company-name">US Health Systems</h3>
+                                    <div class="company-tags">
+                                        <span class="new-match-tag">New match</span>
+                                        <span class="actionability-tag">Actionability</span>
+                                    </div>
+                                </div>
+                                <div class="company-meta">
+                                    <span class="location">Chicago, IL</span><span class="separator">|</span><span class="website">ushealthsystems.com</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="company-meta">
-                            <span class="location">Boston, MA</span><span class="separator">|</span><span class="website">robomed.com</span>
-                        </div>
-                    </div>
-                    <div class="company-info">
-                        <div class="sub-industries">
-                            <span class="sub-industry-tag">Surgical Robotics</span>
-                            <span class="sub-industry-tag">Medical Automation</span>
-                            <span class="sub-industry-tag">AI Diagnostics</span>
-                        </div>
-                        <p class="company-description">Pioneering robotic surgical systems and medical automation technologies. Our advanced robotics enhance precision in surgical procedures and improve patient outcomes through minimally invasive techniques.</p>
-                    </div>
-                </div>
+                            <div class="company-info">
+                                <div class="sub-industries">
+                                    <span class="sub-industry-tag">Healthcare Management</span>
+                                    <span class="sub-industry-tag">Operations</span>
+                                    <span class="sub-industry-tag">Patient Care</span>
+                                    <span class="sub-industry-tag">Streamlined Processes</span>
+                                    <span class="sub-industry-tag">Optimization</span>
+                                    <span class="sub-industry-tag">US Healthcare</span>
+                                </div>
+                                <p class="company-description">Comprehensive healthcare management solutions for US healthcare providers. We streamline operations, improve patient care, and optimize healthcare delivery across the United States.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
                 
-                <div class="card">
-                    <div class="company-logo">
-                        <div class="logo-placeholder">HT</div>
-                    </div>
-                    <div class="company-header">
-                        <div class="company-title-section">
-                            <h3 class="company-name">HealthTech Robotics</h3>
-                            <div class="company-tags">
-                                <span class="actionability-tag">Actionability</span>
+                <table class="card" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #ffffff; border-bottom: 1px solid #e1e8ed; padding: 16px;">
+                    <tr>
+                        <td style="width: 76px; vertical-align: top; padding-right: 16px;">
+                            <div class="logo-placeholder">MT</div>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div class="company-header">
+                                <div class="company-title-section">
+                                    <h3 class="company-name">MedTech Innovations</h3>
+                                    <div class="company-tags">
+                                    </div>
+                                </div>
+                                <div class="company-meta">
+                                    <span class="location">Atlanta, GA</span><span class="separator">|</span><span class="website">medtechinnovations.com</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="company-meta">
-                            <span class="location">San Diego, CA</span><span class="separator">|</span><span class="website">healthtechrobotics.com</span>
-                        </div>
-                    </div>
-                    <div class="company-info">
-                        <div class="sub-industries">
-                            <span class="sub-industry-tag">Rehabilitation</span>
-                            <span class="sub-industry-tag">Physical Therapy</span>
-                            <span class="sub-industry-tag">Patient Recovery</span>
-                            <span class="sub-industry-tag">Robotic Systems</span>
-                            <span class="sub-industry-tag">Personalized Therapy</span>
-                        </div>
-                        <p class="company-description">Innovative robotic rehabilitation and physical therapy solutions. Our robotic systems help patients recover faster and more effectively through personalized therapy programs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="cards-section">
-            <div class="header-card">
-                <h2>Updates to your Saved search <span class="healthcare-us-search">'Healthcare US'</span></h2>
-                <div class="metrics-row">
-                    <div class="metric-column">
-                        <div class="metric-label">New matches</div>
-                        <div class="metric-value">18</div>
-                        <div class="metric-subtitle">Grouped by location</div>
-                        <div class="metric-detail"><span class="underline">10 USA</span></div>
-                        <div class="metric-detail"><span class="underline">5 Canada</span></div>
-                        <div class="metric-detail"><span class="underline">3 Mexico</span></div>
-                    </div>
-                    <div class="metric-column">
-                        <div class="metric-label">New deals</div>
-                        <div class="metric-value">7</div>
-                        <div class="metric-subtitle">Grouped by location</div>
-                        <div class="metric-detail"><span class="underline">10 USA</span></div>
-                        <div class="metric-detail"><span class="underline">5 Canada</span></div>
-                        <div class="metric-detail"><span class="underline">3 Mexico</span></div>
-                    </div>
-                    <div class="metric-column">
-                        <div class="metric-label">Actionability</div>
-                        <div class="metric-value">4</div>
-                        <div class="metric-subtitle">Grouped by location</div>
-                        <div class="metric-detail"><span class="underline">3 US</span></div>
-                        <div class="metric-detail"><span class="underline">1 Canada</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="company-logo">
-                        <div class="logo-placeholder">US</div>
-                    </div>
-                    <div class="company-header">
-                        <div class="company-title-section">
-                            <h3 class="company-name">US Health Systems</h3>
-                            <div class="company-tags">
-                                <span class="new-match-tag">New match</span>
-                                <span class="actionability-tag">Actionability</span>
+                            <div class="company-info">
+                                <div class="sub-industries">
+                                    <span class="sub-industry-tag">Medical Devices</span>
+                                    <span class="sub-industry-tag">Healthcare Tech</span>
+                                    <span class="sub-industry-tag">Innovation</span>
+                                    <span class="sub-industry-tag">Critical Challenges</span>
+                                    <span class="sub-industry-tag">Patient Outcomes</span>
+                                    <span class="sub-industry-tag">Nationwide</span>
+                                </div>
+                                <p class="company-description">Cutting-edge medical device development and healthcare technology solutions. Our innovations address critical healthcare challenges and improve patient outcomes nationwide.</p>
                             </div>
-                        </div>
-                        <div class="company-meta">
-                            <span class="location">Chicago, IL</span><span class="separator">|</span><span class="website">ushealthsystems.com</span>
-                        </div>
-                    </div>
-                    <div class="company-info">
-                        <div class="sub-industries">
-                            <span class="sub-industry-tag">Healthcare Management</span>
-                            <span class="sub-industry-tag">Operations</span>
-                            <span class="sub-industry-tag">Patient Care</span>
-                            <span class="sub-industry-tag">Streamlined Processes</span>
-                            <span class="sub-industry-tag">Optimization</span>
-                            <span class="sub-industry-tag">US Healthcare</span>
-                        </div>
-                        <p class="company-description">Comprehensive healthcare management solutions for US healthcare providers. We streamline operations, improve patient care, and optimize healthcare delivery across the United States.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="company-logo">
-                        <div class="logo-placeholder">MT</div>
-                    </div>
-                    <div class="company-header">
-                        <div class="company-title-section">
-                            <h3 class="company-name">MedTech Innovations</h3>
-                            <div class="company-tags">
-                            </div>
-                        </div>
-                        <div class="company-meta">
-                            <span class="location">Atlanta, GA</span><span class="separator">|</span><span class="website">medtechinnovations.com</span>
-                        </div>
-                    </div>
-                    <div class="company-info">
-                        <div class="sub-industries">
-                            <span class="sub-industry-tag">Medical Devices</span>
-                            <span class="sub-industry-tag">Healthcare Tech</span>
-                            <span class="sub-industry-tag">Innovation</span>
-                            <span class="sub-industry-tag">Critical Challenges</span>
-                            <span class="sub-industry-tag">Patient Outcomes</span>
-                            <span class="sub-industry-tag">Nationwide</span>
-                        </div>
-                        <p class="company-description">Cutting-edge medical device development and healthcare technology solutions. Our innovations address critical healthcare challenges and improve patient outcomes nationwide.</p>
-                    </div>
-                </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
         
