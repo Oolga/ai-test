@@ -45,8 +45,8 @@
             letter-spacing: -0.5px;
             text-decoration: underline;
             margin-bottom: 8px;
-            padding-top: 8px;
-            padding-bottom: 8px;
+            padding-top: 12px;
+            padding-bottom: 12px;
         }
         
         .section-link:last-child {
@@ -272,7 +272,7 @@
         }
         
         /* Mobile responsive styles */
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 600px), screen and (max-device-width: 600px) {
             .container {
                 max-width: 100%;
             }
@@ -386,6 +386,7 @@
                 text-align: left !important;
                 margin-bottom: 20px !important;
                 padding: 0 !important;
+                float: none !important;
             }
             
             .footer th:last-child {
@@ -404,6 +405,7 @@
             /* Footer table mobile overrides */
             .footer table[style*="width: 100%"] {
                 width: 100% !important;
+                table-layout: fixed !important;
             }
             
             .footer td[style*="width: 40%"] {
@@ -411,6 +413,7 @@
                 display: block !important;
                 padding-right: 0 !important;
                 margin-bottom: 20px !important;
+                float: none !important;
             }
             
             .footer td[style*="width: 30%"] {
@@ -418,6 +421,7 @@
                 display: block !important;
                 padding-right: 0 !important;
                 margin-bottom: 20px !important;
+                float: none !important;
             }
             
             .footer td[style*="padding-right: 20px"] {
@@ -430,10 +434,42 @@
                 width: 100% !important;
                 text-align: left !important;
                 margin-bottom: 10px !important;
+                float: none !important;
             }
             
             .footer td[style*="text-align: right"] {
                 text-align: left !important;
+            }
+            
+            /* Additional web browser fixes */
+            .footer table {
+                border-collapse: collapse !important;
+            }
+            
+            .footer tr {
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .footer td, .footer th {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
+        
+        /* Fallback for web browsers - always apply mobile styles for footer */
+        .footer-mobile {
+            display: none;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .footer-desktop {
+                display: none !important;
+            }
+            .footer-mobile {
+                display: block !important;
             }
         }
     </style>
@@ -472,7 +508,7 @@
                                                                                     </table>
                                                                                 </th>
                                                                                 <th align="center" style="width: 20%; vertical-align: top; text-align: right; font-size: 12px; line-height: 18px;">
-                                                                                    <a href="" style="color: #FFFFFF; text-decoration: underline;" target=_blakt>View in browser</a>
+                                                                                    <a href="https://preqin.com/email-viewer?email={{email_id}}&date={{email_date}}" style="color: #FFFFFF; text-decoration: underline;" target="_blank">View in browser</a>
                                                                                 </th>
                                                                             </tr>
                                                                         </tbody>
@@ -528,7 +564,7 @@
                                 </td>
                             </tr>
                                         <tr>
-                <td style="border-bottom: 1px solid #e2dcd6; height: 1px; padding: 0;"></td>
+                <td colspan="2" style="border-bottom: 1px solid #e2dcd6; height: 1px; padding: 0;"></td>
             </tr>
             <tr>
                 <td style="padding-bottom: 16px;">
