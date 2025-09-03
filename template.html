@@ -379,13 +379,93 @@
                 border-bottom: none;
             }
             
+            /* Saved search sections mobile fixes */
+            .metrics-row td[style*="display: inline-block"] {
+                display: block !important;
+                width: 100% !important;
+                margin-right: 0 !important;
+                margin-bottom: 16px !important;
+                border-bottom: 2px solid #6f6e78 !important;
+                padding-bottom: 16px !important;
+            }
+            
+            .metrics-row td[style*="display: inline-block"]:last-child {
+                border-bottom: none !important;
+                margin-bottom: 0 !important;
+            }
+            
+            .metrics-row td[style*="width: 30%"] {
+                width: 100% !important;
+                display: block !important;
+                margin-right: 0 !important;
+                margin-bottom: 16px !important;
+                border-bottom: 2px solid #6f6e78 !important;
+                padding-bottom: 16px !important;
+            }
+            
+            .metrics-row td[style*="width: 30%"]:last-child {
+                border-bottom: none !important;
+                margin-bottom: 0 !important;
+            }
+            
+            /* Metric details mobile fixes */
+            .metric-detail {
+                display: block !important;
+                margin-bottom: 6px !important;
+                line-height: 18px !important;
+                width: 100% !important;
+                clear: both !important;
+                float: none !important;
+            }
+            
+            .metric-detail span {
+                display: inline !important;
+                width: auto !important;
+            }
+            
+            .underline {
+                text-decoration: underline !important;
+            }
+            
+            /* Force line breaks for location links */
+            .metric-detail br {
+                display: block !important;
+                margin: 2px 0 !important;
+                content: "" !important;
+            }
+            
+            /* Ensure proper spacing between location items */
+            .metric-detail:not(:last-child) {
+                margin-bottom: 8px !important;
+            }
+            
+            /* Additional mobile fixes for metric columns */
+            .metric-column div {
+                display: block !important;
+                width: 100% !important;
+            }
+            
+            /* Section headers mobile fixes */
+            .header-card h2 {
+                padding: 16px 16px 0 16px !important;
+                margin: 0 !important;
+                font-size: 18px !important;
+                line-height: 22px !important;
+            }
+            
+            .robotics-search, .healthcare-us-search {
+                display: inline !important;
+            }
+            
+
+            
             /* Footer mobile styles */
             .footer th {
                 display: block !important;
                 width: 100% !important;
                 text-align: left !important;
                 margin-bottom: 20px !important;
-                padding: 0 !important;
+                padding: 0 30px !important;
                 float: none !important;
             }
             
@@ -411,7 +491,7 @@
             .footer td[style*="width: 40%"] {
                 width: 100% !important;
                 display: block !important;
-                padding-right: 0 !important;
+                padding: 0 30px !important;
                 margin-bottom: 20px !important;
                 float: none !important;
             }
@@ -419,7 +499,7 @@
             .footer td[style*="width: 30%"] {
                 width: 100% !important;
                 display: block !important;
-                padding-right: 0 !important;
+                padding: 0 30px !important;
                 margin-bottom: 20px !important;
                 float: none !important;
             }
@@ -435,6 +515,8 @@
                 text-align: left !important;
                 margin-bottom: 10px !important;
                 float: none !important;
+                padding-left: 30px !important;
+                padding-right: 30px !important;
             }
             
             .footer td[style*="text-align: right"] {
@@ -456,6 +538,8 @@
                 display: block !important;
                 width: 100% !important;
                 box-sizing: border-box !important;
+                padding-left: 10px !important;
+                padding-right: 30px !important;
             }
         }
         
@@ -941,7 +1025,7 @@
                                                                                 </td>
                                                                             </tr>
                                                                             <tr align="center">
-                                                                                <td align="left" style="padding-top: 10px; padding-right: 10px; font-size: 14px; font-weight: normal; line-height: 18px; color: #ffffff;">
+                                                                                <td align="left" style="padding-top: 10px; padding-right: 10px; padding-left: 0px !important; font-size: 14px; font-weight: normal; line-height: 18px; color: #ffffff;">
                                                                                     <div>
                                                                                         <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                                             <tbody>
