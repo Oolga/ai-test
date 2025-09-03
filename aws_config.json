@@ -1,0 +1,10 @@
+{
+  "aws_region": "us-east-1",
+  "sender_email": "your-verified-email@example.com",
+  "recipient_emails": [
+    "olgamikhalenka97@gmail.com",
+    "volha.mikhalenka@blackrock.com"
+  ],
+  "email_subject": "Preqin Updates - AWS SES Test",
+  "template_path": "template.html"
+}
