@@ -264,10 +264,10 @@
         }
         
         .footer {
-            background-color: #f4f4f4;
+            background-color: #1b0757;
             padding: 20px;
             text-align: center;
-            color: #666;
+            color: #ffffff !important;
             font-family: Arial, sans-serif;
             font-size: 12px;
         }
@@ -379,6 +379,26 @@
             .actionability-tag {
                 border-bottom: none;
             }
+            
+            /* Footer mobile styles */
+            .footer th {
+                display: block !important;
+                width: 100% !important;
+                text-align: left !important;
+                margin-bottom: 20px !important;
+            }
+            
+            .footer th:last-child {
+                margin-bottom: 0 !important;
+            }
+            
+            .footer th[style*="width: 80"] {
+                width: 100% !important;
+            }
+            
+            .footer th[style*="vertical-align: top"] {
+                vertical-align: top !important;
+            }
         }
     </style>
 </head>
@@ -387,7 +407,7 @@
         <tbody>
             <tr>
                 <td>
-                    <table bgcolor="#FFFFFF" border="0" cellpadding="0" class="resptab darkmode-bg" role="presentation" style="width: 100%;">
+                    <table bgcolor="#FFFFFF" border="0" cellpadding="0" class="resptab darkmode-bg" role="presentation" style="max-width: 650px; width: 100%;">
                         <tbody>
                             <tr align="center">
                                 <td align="center" class="padlr20 padtop20 padbot10" style="padding-top: 30px; padding-bottom: 30px;">
@@ -444,7 +464,7 @@
                             </tr>
                         </tbody>
                     </table>
-                           <table class="top-section" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #ffffff; border-top: 4px solid #1b0757;">
+                           <table class="top-section" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width: 650px; background-color: #ffffff; border-top: 4px solid #1b0757;">
             <tr>
                 <td style="position: relative;">
                     <table cellpadding="0" cellspacing="0" border="0" width="100%">
@@ -487,7 +507,7 @@
             </tr>
         </table>
         
-        <table class="cards-section" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 4px solid #d10077;">
+        <table class="cards-section" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width: 650px; border-top: 4px solid #d10077;">
             <tr>
                 <td>
                     <table class="header-card" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1edea; padding: 16px;">
@@ -633,7 +653,7 @@
             </tr>
         </table>
         
-        <table class="cards-section" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 4px solid #d10077;">
+        <table class="cards-section" cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width: 650px; border-top: 4px solid #d10077;">
             <tr>
                 <td>
                     <table class="header-card" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1edea; padding: 16px;">
@@ -785,11 +805,11 @@
             </tr>
         </table>
         
-        <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 650px;">
             <tbody>
                 <tr align="center">
                     <td align="center" style="padding-bottom: 30px; ">
-                        <table  bgcolor="#1b0757" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <table class="footer" bgcolor="#1b0757" border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tbody>
                                 <tr align="center">
                                     <td align="center" valign="top">
@@ -875,16 +895,26 @@
                                                     </table>
                                                 </td>
                                             </tr>
-                                            <tr align="center"></tr>
+                                            <tr align="center">
+                                                <td align="center">
+                                                    <table cellpadding="0" cellspacing="0" width="100%" style="border-bottom: solid 1px #e3e0ea; border-collapse: collapse;">
+                                                        <tbody>
+                                                            <tr align="center">
+                                                                <td height="1" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
                                             <tr align="center">
                                                 <td align="left" style="padding-top: 20px; padding-bottom: 40px;">
                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                         <tbody>
                                                             <tr>
-                                                                <th align="center" style="vertical-align: top; font-size: 12px; line-height: 16px; font-weight: bold; color: #ffffff; text-align: left;">
+                                                                <th align="center" style="vertical-align: top; font-size: 12px; line-height: 16px; font-weight: bold; color: #ffffff; text-align: left; padding-right: 10px;">
                                                                     <div>PreqinTM All Rights Reserved</div>
                                                                 </th>
-                                                                <th align="center" style="vertical-align: top; font-size: 12px; line-height: 16px; font-weight: normal; color: #ffffff; text-align: right;">
+                                                                <th align="center" style="vertical-align: top; font-size: 12px; line-height: 16px; font-weight: normal; color: #ffffff; text-align: right; padding-right: 10px;">
                                                                     <span>Update your email preferences in your <a href="" style="color: #ffffff; text-decoration: underline;">dashboard</a></span>
                                                                 </th>
                                                             </tr>
