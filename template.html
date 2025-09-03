@@ -385,6 +385,7 @@
                 width: 100% !important;
                 text-align: left !important;
                 margin-bottom: 20px !important;
+                padding: 0 !important;
             }
             
             .footer th:last-child {
@@ -393,10 +394,46 @@
             
             .footer th[style*="width: 80"] {
                 width: 100% !important;
+                display: none !important;
             }
             
             .footer th[style*="vertical-align: top"] {
                 vertical-align: top !important;
+            }
+            
+            /* Footer table mobile overrides */
+            .footer table[style*="width: 100%"] {
+                width: 100% !important;
+            }
+            
+            .footer td[style*="width: 40%"] {
+                width: 100% !important;
+                display: block !important;
+                padding-right: 0 !important;
+                margin-bottom: 20px !important;
+            }
+            
+            .footer td[style*="width: 30%"] {
+                width: 100% !important;
+                display: block !important;
+                padding-right: 0 !important;
+                margin-bottom: 20px !important;
+            }
+            
+            .footer td[style*="padding-right: 20px"] {
+                padding-right: 0 !important;
+            }
+            
+            /* Copyright row mobile */
+            .footer td[style*="padding: 20px 30px 40px 30px"] table tr td {
+                display: block !important;
+                width: 100% !important;
+                text-align: left !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .footer td[style*="text-align: right"] {
+                text-align: left !important;
             }
         }
     </style>
@@ -812,13 +849,16 @@
                             <tbody>
                                 <tr align="center">
                                     <td align="center" valign="top">
+                                        <!--[if mso]>
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-left: 30px; padding-right: 30px;">
+                                        <![endif]-->
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-left: 30px; padding-right: 30px;">
                                             <tr align="center">
                                                 <td align="center" style="padding-top: 40px; padding-bottom: 20px;">
                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                         <tbody>
                                                             <tr>
-                                                                <th align="center" style="vertical-align: top;" valign="top">
+                                                                <th align="center" style="vertical-align: top;" valign="top" width="40%">
                                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                         <tbody>
                                                                             <tr align="center">
@@ -837,8 +877,7 @@
                                                                         </tbody>
                                                                     </table>
                                                                 </th>
-                                                                <th align="center" style="vertical-align: top;" valign="top" width="80">&nbsp;</th>
-                                                                <th align="center" style="vertical-align: top;" valign="top">
+                                                                <th align="center" style="vertical-align: top;" valign="top" width="30%">
                                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                         <tbody>
                                                                             <tr align="center">
@@ -857,7 +896,7 @@
                                                                         </tbody>
                                                                     </table>
                                                                 </th>
-                                                                <th align="center" style="vertical-align: top;" valign="top">
+                                                                <th align="center" style="vertical-align: top;" valign="top" width="30%">
                                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                                         <tbody>
                                                                             <tr align="center">
@@ -895,7 +934,7 @@
                                                 </td>
                                             </tr>
                                             <tr align="center">
-                                                <td align="center" style="padding-left: 30px; padding-right: 30px;">
+                                                <td align="center" >
                                                     <table cellpadding="0" cellspacing="0" width="100%" style="border-bottom: solid 1px #e3e0ea; border-collapse: collapse;">
                                                         <tbody>
                                                             <tr align="center">
@@ -910,10 +949,10 @@
                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                         <tbody>
                                                             <tr>
-                                                                <th align="center" style="vertical-align: top; font-size: 12px; line-height: 16px; font-weight: bold; color: #ffffff; text-align: left; padding-left: 30px;">
+                                                                <th align="center" style="vertical-align: top; font-size: 12px; line-height: 16px; font-weight: bold; color: #ffffff; text-align: left;">
                                                                     <div>PreqinTM All Rights Reserved</div>
                                                                 </th>
-                                                                <th align="center" style="vertical-align: top; font-size: 12px; line-height: 16px; font-weight: normal; color: #ffffff; text-align: right; padding-right: 30px;">
+                                                                <th align="center" style="vertical-align: top; font-size: 12px; line-height: 16px; font-weight: normal; color: #ffffff; text-align: right;">
                                                                     <span>Update your email preferences in your <a href="" style="color: #ffffff; text-decoration: underline;">dashboard</a></span>
                                                                 </th>
                                                             </tr>
